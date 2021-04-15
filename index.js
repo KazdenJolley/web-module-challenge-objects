@@ -188,7 +188,7 @@ function getLongReviews(array) {
     for(let j = 0; j < array[i].feedback.length; j++){
       if(array[i].feedback[j] === " "){
         wordCount++;
-      }
+      }                                                                                                                        
     }
     if(wordCount > 15){
       newArray.push(array[i]);
@@ -217,10 +217,11 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odom) {
+    let drive = (miles) => {return odom + miles};
+    return {odom, drive};
 }
+let car1 = carMaker(10);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
