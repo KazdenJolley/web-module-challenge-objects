@@ -181,10 +181,23 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+  let newArray = [];
+  for(let i = 0; i < array.length; i++){
+    let wordCount = 1;
+    for(let j = 0; j < array[i].feedback.length; j++){
+      if(array[i].feedback[j] === " "){
+        wordCount++;
+      }
+    }
+    if(wordCount > 15){
+      newArray.push(array[i]);
+    }
+    console.log(wordCount)
   }
-  
+  return newArray;
+}
+
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
